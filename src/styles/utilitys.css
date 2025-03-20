@@ -1,0 +1,18 @@
+/* POSICIONAMENTO E ALINHAMENTOS */
+.flex { display: flex; }
+.grid { display: grid; }
+.items-center { align-items: center; }
+
+
+/* ESPAÇAMENTO */
+.g-4 { gap: .4rem;}
+.g-8 { gap: .8rem;}
+.g-12 { gap: 1.2rem;}
+.g-16 { gap: 1.6rem;}
+
+
+/* TIPOGRAFIA */
+.lh-16 { line-height: 1.6rem; }
+.lh-24 { line-height: 2.4rem; }
+.lh-32 { line-height: 3.2rem; }
+.lh-150 { line-height: 150%; }
