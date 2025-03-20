@@ -3,7 +3,154 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Agendamento de Serviços | Mundo Pet</title>
+
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.svg"
+      type="image/x-icon"
+    />
   </head>
-  <body></body>
+  <body>
+    <img src="./src/assets/logo.png" alt="Logo do Mundo Pet" />
+
+    <!-- EXIBIÇÃO DOS AGENDAMENTOS -->
+    <div id="schedule-display">
+      <header id="main-header">
+        <div>
+          <h1>Sua agenda</h1>
+          <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        </div>
+
+        <input type="date"/>
+      </header>
+
+      <!-- Container dos Agendamentos do Dia -->
+      <div id="scheduled-appointments-container">
+
+        <!--Agendamentos da Manhã-->
+        <section id="morning" data-period="morning">
+            <header>
+                <div>
+                    <img src="./src/assets/sun-fog.svg" alt="">
+                    <h3>Manhã</h3>
+                </div>
+
+                <b>09h-12h</b>
+            </header>
+
+            
+            <ul class="appointment-list">
+                <li class="schedule">
+                    <b class="time">09:00</b>
+                    <div>
+                        <strong class="pet-name">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+                    </div>
+                    <span class="service">Vacinação</span>
+                    <button type="button">Remover agendamento</button>
+                </li>
+            </ul>
+        </section>
+
+        <!--Agendamentos da Tarde-->
+        <section id="afternoon" data-period="afternoon">
+            <header>
+                <div>
+                    <img src="./src/assets/cloud-sun.svg" alt="">
+                    <h3>Tarde</h3>
+                </div>
+
+                <b>13h-18h</b>
+            </header>
+
+            <ul class="appointment-list">
+                <li class="schedule">
+                    <b class="time">09:00</b>
+                    <div>
+                        <strong class="pet-name">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+                    </div>
+                    <span class="service">Vacinação</span>
+                    <button type="button">Remover agendamento</button>
+                </li>
+            </ul>
+        </section>
+
+        <!--Agendamentos da Noite-->
+        <section id="night" data-period="night">
+            <header>
+                <div>
+                    <img src="./src/assets/moon-stars.svg" alt="">
+                    <h3>Noite</strong>
+                </div>
+
+                <b>19h-21h</b>
+            </header>
+
+            <ul class="appointment-list">
+                <li class="schedule">
+                    <b class="time">09:00</b>
+                    <div>
+                        <strong class="pet-name">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+                    </div>
+                    <span class="service">Vacinação</span>
+                    <button type="button">Remover agendamento</button>
+                </li>
+            </ul>
+        </section>
+      </div>
+
+      <footer>
+         <button type="button">Novo agendamento</button>
+      </footer>
+    </div>
+
+    <!-- FORMULÁRIO DE AGENDAMENTO -->
+    <form action="" method="">
+        <button type="button">
+            <img src="./src/assets/close.png" alt="Fechar formulário de agendamento">
+        </button>
+        <!-- Cliente e Serviço -->
+        <fieldset>
+            <header>
+                <h2>Agende um atendimento</h2>
+                <span>Preencha os dados do cliente para realizar o agendamento:</span>
+            </header>
+
+            <div class="input-wrapper">
+                <label for="tutor-name">Nome do tutor</label>
+                <input type="text" id="tutor-name" name="tutor-name" placeholder="Helena Souza" minlength="3" maxlength="30" required>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="pet-name">Nome do pet</label>
+                <input type="text" id="pet-name" name="pet-name" placeholder="Cheddar" minlength="3" maxlength="10" required>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(00) 0 0000-0000" minlength="11" maxlength="11" required>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="service">Descrição do serviço</label>
+                <textarea id="service" name="service" placeholder="Banho e tosa" maxlength="100" style="resize: none;" required></textarea>
+            </div>
+        </fieldset>
+
+        <!-- Horário -->
+        <fieldset>
+            <div class="input-wrapper">
+                <label for="date">Data</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="time">Hora</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+        </fieldset>
+
+        <button>Agendar</button>
+    </form>
+  </body>
 </html>
