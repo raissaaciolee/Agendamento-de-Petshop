@@ -1,6 +1,7 @@
 /* POSICIONAMENTO E ALINHAMENTOS */
 .flex { display: flex; }
 .grid { display: grid; }
+.hidden { display: none; }
 .items-center { align-items: center; }
 
 

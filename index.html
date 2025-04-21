@@ -13,100 +13,100 @@
     <link rel="stylesheet" href="./src/styles/index.css">
   </head>
   <body>
-    <img src="./src/assets/logo.png" alt="Logo do Mundo Pet" />
+    <img src="./src/assets/logo.png" alt="Logo do Mundo Pet" id="logo"/>
 
     <!-- EXIBIÇÃO DOS AGENDAMENTOS -->
-    <div id="schedule-display">
-      <header id="main-header">
-        <div>
+    <div id="schedule-display" class="container hidden">
+        <header id="main-header" class="grid g-12">
+        <div class="grid g-4">
           <h1>Sua agenda</h1>
           <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
         </div>
 
-        <input type="date"/>
-      </header>
+        <input type="date" class="input input-date lh-150"/>
+        </header>
 
-      <!-- Container dos Agendamentos do Dia -->
-      <div id="scheduled-appointments-container">
+        <!-- Container dos Agendamentos do Dia -->
+        <div id="scheduled-appointments-container" class="grid g-12">
 
-        <!--Agendamentos da Manhã-->
-        <section id="morning" data-period="morning">
-            <header>
-                <div>
-                    <img src="./src/assets/sun-fog.svg" alt="">
-                    <h3>Manhã</h3>
-                </div>
-
-                <b>09h-12h</b>
-            </header>
-
-            
-            <ul class="appointment-list">
-                <li class="schedule" role="list">
-                    <b class="time">09:00</b>
-                    <div>
-                        <strong class="pet-name">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+            <!--Agendamentos da Manhã-->
+            <section id="morning" class="period-container" data-period="morning">
+                <header class="flex items-center items-center">
+                    <div class="flex items-center g-12">
+                        <img src="./src/assets/sun-fog.svg" alt="">
+                        <h3 class=" lh-24">Manhã</h3>
                     </div>
-                    <span class="service">Vacinação</span>
-                    <button type="button">Remover agendamento</button>
-                </li>
-            </ul>
-        </section>
 
-        <!--Agendamentos da Tarde-->
-        <section id="afternoon" data-period="afternoon">
-            <header>
-                <div>
-                    <img src="./src/assets/cloud-sun.svg" alt="">
-                    <h3>Tarde</h3>
-                </div>
+                    <b class="lh-24">09h-12h</b>
+                </header>
 
-                <b>13h-18h</b>
-            </header>
+                
+                <ul class="appointment-list">
+                    <li class="schedule" role="list">
+                        <b class="time lh-24">09:00</b>
+                        <div>
+                            <strong class="pet-name">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+                        </div>
+                        <span class="service lh-24">Vacinação</span>
+                        <button type="button lh-24">Remover agendamento</button>
+                    </li>
+                </ul>
+            </section>
 
-            <ul class="appointment-list">
-                <li class="schedule" role="list">
-                    <b class="time">09:00</b>
-                    <div>
-                        <strong class="pet-name">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+            <!--Agendamentos da Tarde-->
+            <section id="afternoon" class="period-container" data-period="afternoon">
+                <header class="flex items-center">
+                    <div class="flex items-center g-12">
+                        <img src="./src/assets/cloud-sun.svg" alt="">
+                        <h3 class=" lh-24">Tarde</h3>
                     </div>
-                    <span class="service">Vacinação</span>
-                    <button type="button">Remover agendamento</button>
-                </li>
-            </ul>
-        </section>
 
-        <!--Agendamentos da Noite-->
-        <section id="night" data-period="night">
-            <header>
-                <div>
-                    <img src="./src/assets/moon-stars.svg" alt="">
-                    <h3>Noite</strong>
-                </div>
+                    <b class="lh-24">13h-18h</b>
+                </header>
 
-                <b>19h-21h</b>
-            </header>
+                <ul class="appointment-list">
+                    <li class="schedule" role="list">
+                        <b class="time lh-24">09:00</b>
+                        <div class="pet-and-tutor-name lh-24">
+                            <strong class="pet-name">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+                        </div>
+                        <span class="service lh-24">Vacinação</span>
+                        <button type="button lh-24">Remover agendamento</button>
+                    </li>
+                </ul>
+            </section>
 
-            <ul class="appointment-list">
-                <li class="schedule" role="list">
-                    <b class="time">09:00</b>
-                    <div>
-                        <strong class="pet-name">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+            <!--Agendamentos da Noite-->
+            <section id="night" class="period-container" data-period="night">
+                <header class="flex items-center">
+                    <div class="flex items-center g-12">
+                        <img src="./src/assets/moon-stars.svg" alt="">
+                        <h3 class=" lh-24">Noite</strong>
                     </div>
-                    <span class="service">Vacinação</span>
-                    <button type="button">Remover agendamento</button>
-                </li>
-            </ul>
-        </section>
-      </div>
 
-      <footer>
-         <button type="button">Novo agendamento</button>
-      </footer>
+                    <b class="lh-24">19h-21h</b>
+                </header>
+
+                <ul class="appointment-list">
+                    <li class="schedule" role="list">
+                        <b class="time lh-24">09:00</b>
+                        <div>
+                            <strong class="pet-name lh-24">Thor</strong> / <span class="tutor-name">Fernanda Costa</span>
+                        </div>
+                        <span class="service lh-24">Vacinação</span>
+                        <button type="button lh-24">Remover agendamento</button>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </div>
 
+    <footer>
+        <button type="button">Novo agendamento</button>
+    </footer>
+
     <!-- FORMULÁRIO DE AGENDAMENTO -->
-    <form action="" method="">
+    <form action="" method="" class="">
         <button type="button">
             <img src="./src/assets/close.png" alt="Fechar formulário de agendamento">
         </button>
@@ -119,35 +119,35 @@
 
             <div class="input-wrapper">
                 <label for="tutor-name">Nome do tutor</label>
-                <input type="text" id="tutor-name" name="tutor-name" placeholder="Helena Souza" minlength="3" maxlength="30" required>
+                <input type="text" id="tutor-name" class="input" name="tutor-name" placeholder="Helena Souza" minlength="3" maxlength="30" required>
             </div>
 
             <div class="input-wrapper">
                 <label for="pet-name">Nome do pet</label>
-                <input type="text" id="pet-name" name="pet-name" placeholder="Cheddar" minlength="3" maxlength="10" required>
+                <input type="text" id="pet-name" class="input" name="pet-name" placeholder="Cheddar" minlength="3" maxlength="10" required>
             </div>
 
             <div class="input-wrapper">
                 <label for="phone">Telefone</label>
-                <input type="tel" id="phone" name="phone" placeholder="(00) 0 0000-0000" minlength="11" maxlength="11" required>
+                <input type="tel" id="phone" class="input" name="phone" placeholder="(00) 0 0000-0000" minlength="11" maxlength="11" required>
             </div>
 
             <div class="input-wrapper">
                 <label for="service">Descrição do serviço</label>
-                <textarea id="service" name="service" placeholder="Banho e tosa" maxlength="100" style="resize: none;" required></textarea>
+                <textarea id="service" class="input" name="service" placeholder="Banho e tosa" maxlength="100" style="resize: none;" required></textarea>
             </div>
         </fieldset>
 
-        <!-- Horário -->
+        <!-- Data e Horário -->
         <fieldset>
             <div class="input-wrapper">
                 <label for="date">Data</label>
-                <input type="date" id="date" name="date" required>
+                <input type="date" id="date" class="input input-with-arrow input-hide-picker" name="date" required>
             </div>
 
             <div class="input-wrapper">
                 <label for="time">Hora</label>
-                <input type="time" id="time" name="time" required>
+                <input type="time" id="time" class="input input-with-arrow input-hide-picker" name="time" required>
             </div>
         </fieldset>
 
