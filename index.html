@@ -101,8 +101,8 @@
         </div>
     </div>
 
-    <footer>
-        <button type="button">Novo agendamento</button>
+    <footer class="hidden">
+        <button type="button" class="button">Novo agendamento</button>
     </footer>
 
     <!-- FORMULÁRIO DE AGENDAMENTO -->
@@ -117,41 +117,41 @@
                 <span>Preencha os dados do cliente para realizar o agendamento:</span>
             </header>
 
-            <div class="input-wrapper">
-                <label for="tutor-name">Nome do tutor</label>
+            <div class="input-wrapper flex g-4">
+                <label for="tutor-name" class="lh-24">Nome do tutor</label>
                 <input type="text" id="tutor-name" class="input" name="tutor-name" placeholder="Helena Souza" minlength="3" maxlength="30" required>
             </div>
 
-            <div class="input-wrapper">
-                <label for="pet-name">Nome do pet</label>
+            <div class="input-wrapper flex g-4">
+                <label for="pet-name" class="lh-24">Nome do pet</label>
                 <input type="text" id="pet-name" class="input" name="pet-name" placeholder="Cheddar" minlength="3" maxlength="10" required>
             </div>
 
-            <div class="input-wrapper">
-                <label for="phone">Telefone</label>
+            <div class="input-wrapper flex g-4">
+                <label for="phone" class="lh-24">Telefone</label>
                 <input type="tel" id="phone" class="input" name="phone" placeholder="(00) 0 0000-0000" minlength="11" maxlength="11" required>
             </div>
 
-            <div class="input-wrapper">
-                <label for="service">Descrição do serviço</label>
+            <div class="input-wrapper flex g-4">
+                <label for="service" class="lh-24">Descrição do serviço</label>
                 <textarea id="service" class="input" name="service" placeholder="Banho e tosa" maxlength="100" style="resize: none;" required></textarea>
             </div>
         </fieldset>
 
         <!-- Data e Horário -->
         <fieldset>
-            <div class="input-wrapper">
-                <label for="date">Data</label>
+            <div class="input-wrapper flex g-4">
+                <label for="date" class="lh-24">Data</label>
                 <input type="date" id="date" class="input input-with-arrow input-hide-picker" name="date" required>
             </div>
 
-            <div class="input-wrapper">
-                <label for="time">Hora</label>
+            <div class="input-wrapper flex g-4">
+                <label for="time" class="lh-24">Hora</label>
                 <input type="time" id="time" class="input input-with-arrow input-hide-picker" name="time" required>
             </div>
         </fieldset>
 
-        <button>Agendar</button>
+        <button class="button">Agendar</button>
     </form>
   </body>
 </html>
