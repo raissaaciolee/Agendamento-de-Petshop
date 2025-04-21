@@ -1,0 +1,114 @@
+.schedule-section {
+    background-color: var(--background-tertiary);
+    border-radius: 1rem;
+}
+
+/* Estilização do header */
+.schedule-section header {
+        padding: 1.2rem 2rem;
+        border-bottom: 1px solid var(--border-divisor);
+
+        /* Estilização do time */
+        & time {
+            margin-left: auto;
+            font: 700 1.6rem var(--ff-inter-tight);
+        } 
+}
+
+.appointment-list {
+    padding: 2rem;
+
+    /* Estilização do item de agendamento */
+    & .appointment-item {
+        padding: 1.6rem 1.2rem;
+        grid-area:
+        "time-and-names"
+        "service"
+        "remove-appointment";
+
+        /* Adiciona borda inferior nos itens, exceto no último */
+        &:not(:last-child) { border-bottom: 1px solid var(--border-divisor); }
+    }
+}
+
+/* Container com o horário e o nome do tutor/pet (layout mobile) */
+.time-and-names {
+    grid-template-areas: time-and-names;
+        
+    & b, & strong {
+        color: var(--content-primary);
+        font-weight: 700;
+    }
+}
+
+/* Estilização do serviço contratado
+   - Limita o tamanho do texto para 20 caracteres
+   - Esconde o excesso de caracteres
+   - Mostra o texto completo ao passar o mouse */
+.service {
+  display: inline-block;
+  max-width: 20ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Cria a tooltip */
+.service-container {
+  position: relative;
+  display: inline-block;
+
+    /* Tooltip escondida */
+    & .tooltip {
+        display: none;
+        justify-content: center;
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--background-secondary);
+        color: var(--content-primary);
+        padding: 1.2rem;
+        border-radius: 0.4rem;
+        width: 30rem;
+        text-align: center;
+        z-index: 10;
+    }
+
+    /* Mostra a tooltip no hover do container */
+    &:hover .tooltip { display: block; }
+}
+
+/* Estilização do botão de remoção do agendamento */ 
+.remove-appointment {
+    grid-template-areas: remove-appointment;
+    margin-left: auto;
+    color: var(--content-tertiary);
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        color: var(--content-primary);
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-brand);
+        outline-offset: 2px;
+    }
+}
+
+@media(width >= 1024px) {
+
+    /* Ajustes para telas acima de 1024px
+       - Itens dispostos horizontalmente
+       - Alinhamento central */
+    .appointment-item {
+        display: flex;
+        grid-area: unset;
+        align-items: center;
+        justify-content: space-between;
+
+        /* Remove o margin dos elementos para melhorar o alinhamento */
+        & .service, & .remove-appointment { margin: 0; }
+    }
+}
