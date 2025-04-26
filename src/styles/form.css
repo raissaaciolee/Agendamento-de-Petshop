@@ -1,0 +1,58 @@
+/* Para desfocar o fundo */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 999;
+  backdrop-filter: blur(6px);
+}
+
+.form {
+    position: absolute;
+    padding: 4rem 2rem;
+    margin-block: 7.6rem 3.9rem;
+    background-color: var(--background-tertiary);
+    border-radius: 1.2rem;
+    position: relative;
+
+    /* Estilização do botão de fechar o formulário */
+    & .close-form {
+        position: absolute;
+        inset: .8rem .8rem auto auto;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    /* Espaçamento entre os grupos de inputs */
+    & .input-container {
+        margin-block: 2.8rem;
+    }
+
+    /* Botão de criação de agendamento alinhado à direita */
+    & .create-appointment-button {
+        margin-left: auto;
+    }
+}
+
+@media (width >= 1024px) {
+    .overlay {
+        display: flex;
+        align-items: center;
+    }
+
+    .form {
+        max-width: 44.5rem;
+        margin-block: 2.6rem;
+
+        /* Inputs de data e hora lado a lado em telas maiores */
+        & .date-hour-inputs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.6rem;
+        }
+    }
+}

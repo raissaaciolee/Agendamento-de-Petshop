@@ -84,7 +84,6 @@
     grid-template-areas: remove-appointment;
     margin-left: auto;
     color: var(--content-tertiary);
-    transition: all .2s ease-in-out;
 
     &:hover {
         color: var(--content-primary);

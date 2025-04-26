@@ -1,14 +1,13 @@
 /* Estilo base dos inputs */
 .input {
     position: relative;
-    padding: 1.2rem 4rem;
+    padding: 1.2rem 1.2rem 1.2rem 4rem;
     font: 400 1.6rem var(--ff-inter);
     background: transparent no-repeat 1.2rem center;
     color: var(--content-secondary);
     border: 1px solid var(--border-primary);
     outline: 2px solid transparent;
     border-radius: .8rem;
-    transition: all .2s ease-in-out;
 
     &:hover { border-color: var(--border-secondary); }
     &:focus-within { outline: 1px solid var(--color-brand); }
@@ -47,7 +46,12 @@
 #time { background-image: url("../../assets/clock.svg"); }
 
 /* Estilo específico para o campo de serviço (sem ícone, com padding reduzido) */
-#service { padding-inline: 1.2rem; }
+#service { 
+    padding-inline: 1.2rem;
+    height: 9rem;
+    resize: none;
+    scrollbar-width: none;
+}
 
 /* Estilização dos agrupamento dos inputs e labels */
 .input-wrapper {

@@ -17,3 +17,6 @@
 .lh-24 { line-height: 2.4rem; }
 .lh-32 { line-height: 3.2rem; }
 .lh-150 { line-height: 150%; }
+
+/* ANIMAÇÃO E TRANSIÇÃO */
+.transition { transition: all .5s ease-in-out; }
