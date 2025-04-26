@@ -33,7 +33,6 @@
 
     /* ESPAÇAMENTOS */
     --pd-x: 2rem;
-    --pd-y: 5.7rem 4.4rem;
 }
 
 .container {
@@ -42,21 +41,11 @@
   margin-inline: auto;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
+    position: relative;
     font: 500 1.4rem var(--ff-inter);
     background-color: var(--background-primary);
     color: var(--content-secondary);
-}
-
-#logo {
-    display: block;
-    position: absolute;
-    top: 0;
-    z-index: 1000; 
 }
 
 h1, h2, h3 {
@@ -83,6 +72,5 @@ fieldset { border: none; }
     :root {
         /* ESPAÇAMENTOS */
         --pd-x: 8rem;
-        --pd-y: 6.2rem;
     }
 }

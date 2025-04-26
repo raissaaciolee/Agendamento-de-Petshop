@@ -46,7 +46,7 @@
 #time { background-image: url("../../assets/clock.svg"); }
 
 /* Estilo específico para o campo de serviço (sem ícone, com padding reduzido) */
-#service { 
+#service {
     padding-inline: 1.2rem;
     height: 9rem;
     resize: none;

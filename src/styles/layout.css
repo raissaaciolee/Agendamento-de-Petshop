@@ -1,0 +1,51 @@
+#logo {
+    position: absolute;
+    top: 0;
+    z-index: 1000; 
+}
+
+#schedule-display {
+    padding-block-start: 5.6rem;
+
+    & #main-header {
+        margin-bottom: 3.2rem;
+        
+        & input { max-width: 18.3rem; }
+    }
+
+    & #scheduled-appointments-container {
+        margin-bottom: 5.6rem;
+    }
+
+    & footer {
+        width: 100vw;
+        margin-inline: calc(-50vw + 50%);
+        background-color: var(--background-tertiary);
+        padding-block: 1.8rem;
+        text-align: center;
+    }
+}
+
+@media (width >= 1024px) {
+    #schedule-display {
+        padding-block: 6.2rem 7.2rem;
+        
+        & #main-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & #scheduled-appointments-container { margin: 0; }
+
+        & footer {
+            width: unset;
+            margin-inline: 0;
+            padding: 0;
+            background-color: transparent;
+            text-align: left;
+            position: absolute;
+            right: 3rem;
+            bottom: 1.5rem;
+        }
+    }
+}
