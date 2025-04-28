@@ -1,25 +1,37 @@
+/* Logo fixado no topo */
 #logo {
     position: absolute;
     top: 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
+/* Container principal do agendamento */
 #schedule-display {
-    padding-block-start: 5.6rem;
+    padding-block: 5.6rem;
+    min-height: 100vh;
+    position: relative;
 
+    /* Cabeçalho do agendamento */
     & #main-header {
         margin-bottom: 3.2rem;
         
-        & input { max-width: 18.3rem; }
+        /* Campo de input no cabeçalho */
+        & input {
+            max-width: 18.3rem;
+        }
     }
 
+    /* Container de agendamentos */
     & #scheduled-appointments-container {
         margin-bottom: 5.6rem;
     }
 
+    /* Rodapé da página com o botão */
     & footer {
         width: 100vw;
         margin-inline: calc(-50vw + 50%);
+        position: absolute;
+        inset: auto 0 0 0;
         background-color: var(--background-tertiary);
         padding-block: 1.8rem;
         text-align: center;
@@ -27,25 +39,30 @@
 }
 
 @media (width >= 1024px) {
+    /* Ajuste do container principal em telas grandes */
     #schedule-display {
-        padding-block: 6.2rem 7.2rem;
-        
+        padding-block: 6.2rem 8rem;
+
+        /* Ajuste do cabeçalho em telas grandes */
         & #main-header {
             display: flex;
             justify-content: space-between;
         }
 
-        & #scheduled-appointments-container { margin: 0; }
+        /* Ajuste do container de agendamentos em telas grandes */
+        & #scheduled-appointments-container {
+            margin: 0;
+        }
 
+        /* Ajuste do rodapé em telas grandes */
         & footer {
-            width: unset;
+            left: auto;
+            bottom: 2rem;
+            width: auto;
             margin-inline: 0;
             padding: 0;
-            background-color: transparent;
             text-align: left;
-            position: absolute;
-            right: 3rem;
-            bottom: 1.5rem;
+            background-color: transparent;
         }
     }
 }

@@ -41,7 +41,10 @@
   margin-inline: auto;
 }
 
+html { height: 100%; }
+
 body {
+    min-height: 100%;
     position: relative;
     font: 500 1.4rem var(--ff-inter);
     background-color: var(--background-primary);

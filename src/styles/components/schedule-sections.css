@@ -1,10 +1,10 @@
+/* Estilização para cada período */
 .schedule-section {
     background-color: var(--background-tertiary);
     border-radius: 1rem;
-}
 
-/* Estilização do header */
-.schedule-section header {
+    /* Estilização do header */
+    & header {
         padding: 1.2rem 2rem;
         border-bottom: 1px solid var(--border-divisor);
 
@@ -12,7 +12,8 @@
         & time {
             margin-left: auto;
             font: 700 1.6rem var(--ff-inter-tight);
-        } 
+        }
+    }
 }
 
 .appointment-list {
@@ -26,8 +27,21 @@
         "service"
         "remove-appointment";
 
-        /* Adiciona borda inferior nos itens, exceto no último */
-        &:not(:last-child) { border-bottom: 1px solid var(--border-divisor); }
+        /* Adiciona borda superior nos itens, exceto no primeiro */
+        &:not(:first-child) { border-top: 1px solid var(--border-divisor); }
+    }
+}
+
+/* Mensagem informando que naquele período não há agendamentos */
+.no-schedules {
+    padding-block: 1.2rem;
+    justify-self: center;
+    font-size: 1.6rem;
+    
+    & span {
+        max-width: 20ch;
+        word-wrap: break-word;
+        text-align: center;
     }
 }
 
@@ -69,7 +83,7 @@
         background-color: var(--background-secondary);
         color: var(--content-primary);
         padding: 1.2rem;
-        border-radius: 0.4rem;
+        border-radius: 0.8rem;
         width: 30rem;
         text-align: center;
         z-index: 10;
@@ -109,4 +123,7 @@
         /* Remove o margin dos elementos para melhorar o alinhamento */
         & .service, & .remove-appointment { margin: 0; }
     }
+
+    /* Tira a largura máxima */
+    .no-schedules span { max-width: none; }
 }

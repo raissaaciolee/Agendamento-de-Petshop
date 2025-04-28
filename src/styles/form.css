@@ -1,8 +1,7 @@
 /* Para desfocar o fundo */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   min-height: 100%;
   z-index: 999;
@@ -22,6 +21,7 @@
     }
 }
 
+/* Estilização do formulário */
 .form {
     position: absolute;
     padding: 4rem 2rem;
@@ -30,11 +30,15 @@
     border-radius: 1.2rem;
     position: relative;
     animation: appear .5s ease-in-out backwards;
+    max-height: 85vh;
+    overflow-y: auto;
+    scrollbar-width: none;
 
     /* Estilização do botão de fechar o formulário */
     & .close-form {
         position: absolute;
-        inset: .8rem .8rem auto auto;
+        top: .8rem;
+        right: .8rem;
 
         &:hover {
             transform: scale(1.1);
@@ -53,14 +57,10 @@
 }
 
 @media (width >= 1024px) {
-    .overlay {
-        display: flex;
-        align-items: center;
-    }
-
+    /* Largura máxima do formulário e margin-top flexível */
     .form {
         max-width: 44.5rem;
-        margin-block: 2.6rem;
+        margin-top: 5%;
 
         /* Inputs de data e hora lado a lado em telas maiores */
         & .date-hour-inputs {
