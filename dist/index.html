@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento de Serviços | Mundo Pet</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/styles/index.css">
+  <link rel="icon" href="favicon.svg"><script defer src="main.js"></script></head>
+  <body>
+    <img src="./src/assets/logo.png" alt="Logo do Mundo Pet" id="logo"/>
+
+    <!-- EXIBIÇÃO DOS AGENDAMENTOS -->
+    <div id="schedule-display" class="container">
+        <header id="main-header" class="grid g-12">
+            <div class="grid g-4">
+                <h1>Sua agenda</h1>
+                <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+            </div>
+
+            <input type="date" id="date" class="input input-with-arrow input-hide-picker transition lh-150" name="date" required>
+        </header>
+
+        <!-- Container dos Agendamentos do Dia -->
+        <div id="scheduled-appointments-container" class="grid g-12">
+
+            <!--Agendamentos da Manhã-->
+            <section id="morning" class="schedule-section" data-period="morning" aria-labelledby="morning-header">
+                <header class="schedule-header flex items-center g-12">
+                    <img src="./src/assets/sun-fog.svg">
+                    <h3 class="">Manhã</h3>
+                    <time class="flex" datetime="09:00-12:00">09h-12h</time>
+                </header>
+
+                <ul class="appointment-list grid g-12">
+                    <!-- <li class="appointment-item grid" role="list">
+                        <div class="time-and-names flex items-center g-12">
+                            <b class="appointment-time lh-24">09:00</b>
+                            <div class="appointment-details  items-center g-4">
+                                <strong class="lh-24">Thor</strong> / 
+                                <span class="lh-24">Fernanda Costa</span>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <span class="service">Vacinação</span>
+                            <span class="tooltip">Vacinação</span>
+                        </div>
+                        <button type="button" class="remove-appointment transition lh-16" aria-label="Remover agendamento">Remover agendamento</button>
+                    </li> -->
+                    <li class="no-schedules flex items-center g-8">
+                        <img src="./src/assets/calendar-x.svg" alt="">
+                        <span>Sem agendamentos ainda. Que tal criar o primeiro?</span>
+                    </li>
+                </ul>
+            </section>
+
+
+            <!--Agendamentos da Tarde-->
+            <section id="afternoon" class="schedule-section" data-period="afternoon" aria-labelledby="afternoon-header">
+                <header class="schedule-header flex items-center g-12">
+                    <img src="./src/assets/cloud-sun.svg">
+                    <h3 class="">Tarde</h3>
+                    <time class="flex" datetime="13:00-18:00">13h-18h</time>
+                </header>
+
+                <ul class="appointment-list grid g-12">
+                    <!-- <li class="appointment-item grid" role="list">
+                        <div class="time-and-names flex items-center g-12">
+                            <b class="appointment-time lh-24">09:00</b>
+                            <div class="appointment-details  items-center g-4">
+                                <strong class="lh-24">Thor</strong> / 
+                                <span class="lh-24">Fernanda Costa</span>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <span class="service">Vacinação</span>
+                            <span class="tooltip">Vacinação</span>
+                        </div>
+                        <button type="button" class="remove-appointment transition lh-16" aria-label="Remover agendamento">Remover agendamento</button>
+                    </li> -->
+                    <li class="no-schedules flex items-center g-8">
+                        <img src="./src/assets/calendar-x.svg" alt="">
+                        <span>Sem agendamentos ainda. Que tal criar o primeiro?</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!--Agendamentos da Noite-->
+            <section id="nigth" class="schedule-section" data-period="nigth" aria-labelledby="nigth-header">
+                <header class="schedule-header flex items-center g-12">
+                    <img src="./src/assets/moon-stars.svg">
+                    <h3 class="">Noite</h3>
+                    <time class="flex" datetime="19:00-21:00">19h-21h</time>
+                </header>
+
+                <ul class="appointment-list grid g-12">
+                    <!-- <li class="appointment-item grid" role="list">
+                        <div class="time-and-names flex items-center g-12">
+                            <b class="appointment-time lh-24">09:00</b>
+                            <div class="appointment-details  items-center g-4">
+                                <strong class="lh-24">Thor</strong> / 
+                                <span class="lh-24">Fernanda Costa</span>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <span class="service">Vacinação</span>
+                            <span class="tooltip">Vacinação</span>
+                        </div>
+                        <button type="button" class="remove-appointment transition lh-16" aria-label="Remover agendamento">Remover agendamento</button>
+                    </li> -->
+                    <li class="no-schedules flex items-center g-8">
+                        <img src="./src/assets/calendar-x.svg" alt="">
+                        <span>Sem agendamentos ainda. Que tal criar o primeiro?</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            <button type="button" class="button">Novo agendamento</button>
+        </footer>
+    </div>
+    
+    
+    <!-- FORMULÁRIO DE AGENDAMENTO -->
+    <div class="overlay hidden">
+        <form action="" method="" class="container form">
+            <button type="button" class="close-form transition">
+                <img src="./src/assets/close.png" alt="Fechar formulário de agendamento">
+            </button>
+
+            <header class="grid g-4">
+                <h2>Agende um atendimento</h2>
+                <span>Preencha os dados do cliente para realizar o agendamento:</span>
+            </header>
+
+            <div class="input-container grid g-16">
+                <!-- Cliente e Serviço -->
+                <fieldset>
+                    <div class="grid g-16">
+                        <div class="input-wrapper flex g-4">
+                            <label for="tutor-name" class="lh-24">Nome do tutor</label>
+                            <input type="text" id="tutor-name" class="input transition lh-150" name="tutor-name" placeholder="Helena Souza" minlength="3" maxlength="30" required>
+                        </div>
+
+                        <div class="input-wrapper flex g-4">
+                            <label for="pet-name" class="lh-24">Nome do pet</label>
+                            <input type="text" id="pet-name" class="input transition lh-150" name="pet-name" placeholder="Cheddar" minlength="3" maxlength="10" required>
+                        </div>
+
+                        <div class="input-wrapper flex g-4">
+                            <label for="phone" class="lh-24">Telefone</label>
+                            <input type="tel" id="phone" class="input transition lh-150" name="phone" placeholder="(00) 0 0000-0000" minlength="11" maxlength="11" required>
+                        </div>
+
+                        <div class="input-wrapper flex g-4">
+                            <label for="service" class="lh-24">Descrição do serviço</label>
+                            <textarea id="service" class="input transition lh-150" name="service" placeholder="Banho e tosa" required></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Data e Horário -->
+                <fieldset class="date-hour-inputs grid g-16">
+                    <div class="input-wrapper flex g-4">
+                        <label for="date" class="lh-24">Data</label>
+                        <input type="date" id="date" class="input transition input-with-arrow input-hide-picker lh-150" name="date" required>
+                    </div>
+
+                    <div class="input-wrapper flex g-4">
+                        <label for="time" class="lh-24">Hora</label>
+                        <input type="time" id="time" class="input transition input-with-arrow input-hide-picker lh-150" name="time" required>
+                    </div>
+                </fieldset>  
+            </div>
+            
+
+            <button class="button flex create-appointment-button">Agendar</button>
+        </form>
+    </div>
+  </body>
+</html>
